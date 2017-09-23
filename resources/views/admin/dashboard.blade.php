@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    Tableau de bord
+@endsection
+
 @section('content')
 <h1>Dashboard</h1>
 

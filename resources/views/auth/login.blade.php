@@ -20,8 +20,8 @@
                 <svg class="icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
                 </svg>
-                <span class="hidden">Username</span></label>
-            <input id="login__email" type="text" name="email" class="form__input" placeholder="Email"
+                <span class="hidden">Email</span></label>
+            <input id="login__email" type="email" name="email" class="form__input" placeholder="Email"
                    value="{{ old('email') }}" required autofocus>
         </div>
 

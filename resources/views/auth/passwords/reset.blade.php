@@ -21,7 +21,7 @@
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
                     </svg>
                     <span class="hidden">Email</span></label>
-                <input id="login__email" type="text" name="email" class="form__input" placeholder="Email"
+                <input id="login__email" type="email" name="email" class="form__input" placeholder="Email"
                        value="{{ $email or old('email') }}" required autofocus>
             </div>
 

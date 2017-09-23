@@ -17,7 +17,7 @@ Nouveau portfolio fait en laravel. Front pour le site vitrine et back avec authe
 5. Modifier la config de la database dans le fichier .env
 ```
 DB_CONNECTION=sqlite
-DB_DATABASE=database/data.sqlite
+DB_DATABASE=database/database.sqlite
 ```
 6 . Créer un fichier dans `database/data.sqlite`
 
