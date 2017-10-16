@@ -5,8 +5,8 @@ Nouveau portfolio fait en laravel. Front pour le site vitrine et back avec authe
 - PHP 7.1 minimum
 - Extensions de PHP7 mbstrinng, intl, ...
 
-    `apt install php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-gd php7.0-mcrypt php7.0-msgpack php7.0-memcached php7.0-intl php7.0-sqlite3 php7.0-gmp php7.0-geoip php7.0-mbstring php7.0-xml php7.0-zip`
-- php7.1-sqlite
+    `apt install --no-install-recommends php7.1 libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-msgpack php7.1-memcached php7.1-intl php7.1-sqlite3 php7.1-gmp php7.1-geoip php7.1-mbstring php7.1-redis php7.1-xml php7.1-zip`
+- `php7.1-sqlite`
 - Composer
 
 ## Installation développement
@@ -24,3 +24,8 @@ DB_DATABASE=database/database.sqlite
 7 . Lancer un serveur avec `php artisan serve`
 
 8 . Lancer un `php artisan `
+
+
+### Problèmes
+- Installation PHP7.1 : https://tecadmin.net/install-php7-on-debian/
+- https://www.noobunbox.net/serveur/auto-hebergement/installer-php-7-1-sous-debian-et-ubuntu/

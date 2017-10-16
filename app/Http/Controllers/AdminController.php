@@ -20,18 +20,18 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
     public function infos_site(){
-        return view('admin.dashboard');
+        return view('admin.infos_site');
     }
     public function competences(){
-        return view('admin.dashboard');
+        return view('admin.competences');
     }
-    public function parcours(){
-        return view('admin.dashboard');
+    public function experience(){
+        return view('admin.experience');
     }
     public function projets(){
-        return view('admin.dashboard');
+        return view('admin.projets');
     }
     public function media(){
-        return view('admin.dashboard');
+        return view('admin.media');
     }
 }

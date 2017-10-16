@@ -45,25 +45,25 @@
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('admin_dashboard') }}">Tableau de bord <span class="sr-only">(current)</span></a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_dashboard') ? 'active' : '') ?>" href="{{ route('admin_dashboard') }}">Tableau de bord <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin_infos_site') }}">Infos du site</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_infos_site') ? 'active' : '') ?>" href="{{ route('admin_infos_site') }}">Infos du site</a>
                 </li>
             </ul>
 
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('admin_competences') }}">Compétences <span class="sr-only">(current)</span></a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_competences') ? 'active' : '') ?>" href="{{ route('admin_competences') }}">Compétences <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin_parcours') }}">Parcours</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_experience') ? 'active' : '') ?>" href="{{ route('admin_experience') }}">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin_projets') }}">Projets</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_projets') ? 'active' : '') ?>" href="{{ route('admin_projets') }}">Projets</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin_media') }}">Media</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_media') ? 'active' : '') ?>" href="{{ route('admin_media') }}">Media</a>
                 </li>
             </ul>
         </nav>
