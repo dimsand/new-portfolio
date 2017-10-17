@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableSiteInfos extends Migration
+class CreateTableTechnos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTableSiteInfos extends Migration
      */
     public function up()
     {
-        Schema::create('site_infos', function (Blueprint $table) {
+        Schema::create('technos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('info');
-            $table->text('description');
-            $table->timestamps();
+            $table->string('libelle');
+            $table->integer('techno_type_id')->unsigned();
+            $table->foreign('techno_type_id')->references('id')->on('techno_types');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateTableSiteInfos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_infos');
+        Schema::dropIfExists('technos');
     }
 }

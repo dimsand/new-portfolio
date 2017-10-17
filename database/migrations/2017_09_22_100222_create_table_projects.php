@@ -13,7 +13,18 @@ class CreateTableProjects extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('projects', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->text('description');
+            $table->integer('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('companies');
+            $table->integer('project_category_id')->unsigned();
+            $table->foreign('project_category_id')->references('id')->on('project_categories');
+            $table->integer('techno_id')->unsigned();
+            $table->foreign('techno_id')->references('id')->on('project_technos');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +34,6 @@ class CreateTableProjects extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('projects');
     }
 }
