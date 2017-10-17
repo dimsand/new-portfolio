@@ -52,12 +52,10 @@ Présentation
                     <a target="_blank" href="{{ url('https://twitter.com/dim_sand') }}" class="icon fa-twitter"></a>
                 </div>
                 <div class="presentation">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    <p>Bonjour, je m'appelle <span class="font-weight-bold">Dimitri Sandron</span>. Je suis <a>développeur Full Stack</a></p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </header>
 
@@ -196,6 +194,16 @@ Présentation
             $('.details_projet').slideDown();
             $(this).css({'opacity':'1','border':'solid 1px #333'});
             $('.details_projet').css('opacity','1');
+        });
+
+        $(document).on('click', ".icon", function(){
+            console.log('test');
+            if((this).attr('href') == '#work'){
+                $("#wrapper").css({'padding-top':'45px'});
+            }
+            else{
+                $("#wrapper").css({'padding-top':'210px'});
+            }
         });
     </script>
 @endsection

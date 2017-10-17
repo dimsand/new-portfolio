@@ -36,4 +36,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function authenticated($request, $user)
+    {
+        flash('Welcome back ' . $user->name . ', you have been logged in');
+    }
 }
