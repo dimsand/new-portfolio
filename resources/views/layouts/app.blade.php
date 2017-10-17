@@ -12,56 +12,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('style')
 </head>
 <body>
-<div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    @yield('content')
-
-
-    <footer class="footer">
-        <div class="container">
-            @guest
-            <a href="{{ route('login') }}" class="btn btn-dark btn-sm" role="button" aria-pressed="true">Login</a>
-            <a href="{{ route('register') }}" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Register</a>
-            @else
-                <a href="{{ route('admin_dashboard') }}" class="btn btn-dark btn-sm" role="button"
-                   aria-pressed="true">{{ Auth::user()->name }}</a>
-                <a href="{{ route('logout') }}"
-                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                   class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Logout</a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form>
-                @endguest
-        </div>
-    </footer>
-
-</div>
+@yield('content')
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/front/jquery.min.js') }}"></script>
+@yield('script')
 </body>
 </html>
