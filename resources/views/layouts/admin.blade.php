@@ -14,11 +14,14 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-grid.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    @yield('style')
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">Administration portfolio</a>
-    <button class="navbar-toggler d-lg-none collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler d-lg-none collapsed" type="button" data-toggle="collapse"
+            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+            aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -45,25 +48,31 @@
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_dashboard') ? 'active' : '') ?>" href="{{ route('admin_dashboard') }}">Tableau de bord <span class="sr-only">(current)</span></a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_dashboard') ? 'active' : '') ?>"
+                       href="{{ route('admin_dashboard') }}">Tableau de bord <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_infos_site') ? 'active' : '') ?>" href="{{ route('admin_infos_site') }}">Infos du site</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_infos_site') ? 'active' : '') ?>"
+                       href="{{ route('admin_infos_site') }}">Infos du site</a>
                 </li>
             </ul>
 
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_competences') ? 'active' : '') ?>" href="{{ route('admin_competences') }}">Compétences <span class="sr-only">(current)</span></a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_competences') ? 'active' : '') ?>"
+                       href="{{ route('admin_competences') }}">Compétences <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_experience') ? 'active' : '') ?>" href="{{ route('admin_experience') }}">Experience</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_experience') ? 'active' : '') ?>"
+                       href="{{ route('admin_experience') }}">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_projets') ? 'active' : '') ?>" href="{{ route('admin_projets') }}">Projets</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_projets') ? 'active' : '') ?>"
+                       href="{{ route('admin_projets') }}">Projets</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_media') ? 'active' : '') ?>" href="{{ route('admin_media') }}">Media</a>
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_media') ? 'active' : '') ?>"
+                       href="{{ route('admin_media') }}">Media</a>
                 </li>
             </ul>
         </nav>
@@ -74,8 +83,11 @@
 
 </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/front/jquery.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.2/umd/popper.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+@yield('script')
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

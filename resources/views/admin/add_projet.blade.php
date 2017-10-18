@@ -1,45 +1,87 @@
 @extends('layouts.admin')
 
 @section('title')
-    Projets
+    Ajout projet
+@endsection
+
+@section('style')
+    <link href="{{ asset('css/selectize.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/selectize.bootstrap3.css') }}" rel="stylesheet">
+    <style>
+        textarea {
+            width: 100%;
+            padding: .5rem .75rem;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: #495057;
+            background-color: #fff;
+            background-image: none;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: .25rem;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
+        .md-form {
+            margin-bottom: 6px;
+        }
+
+        .selectize-input {
+            width: 100%;
+            padding: .375rem 1.75rem .375rem .75rem;
+            margin-bottom: 6px;
+        }
+
+        .single_select{
+            width: 100%;
+            margin-bottom: 6px;
+        }
+    </style>
 @endsection
 
 @section('content')
-<h1>Projets</h1>
+    <h1>Ajout projet</h1>
 
-<section class="">
-    <div>
-        <h2>Projets visibles</h2>
-    </div>
-    <button class="btn btn-info">Ajouter un projet</button>
-    <table class="table table-hover table-sm table-bordered table-striped">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Titre</th>
-            <th>Créé le</th>
-            <th>Mis à jour le</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($projets as $p)
-            <tr>
-                <th scope="row">{{$p['id']}}</th>
-                <td>{{$p['title']}}</td>
-                <td>{{$p['created_at']}}</td>
-                <td>{{$p['updated_at']}}</td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
+    <section class="">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{{ route('admin_add_project_form') }}">
+                    {{ csrf_field() }}
+                    <div class="md-form">
+                        <input type="text" id="title" class="form-control" name="title" placeholder="Nom" required
+                               autofocus>
+                    </div>
+                    <div class="md-form">
+                    <textarea type="text" id="description" class="md-textarea" name="description" rows="5"
+                              placeholder="Description"
+                              required></textarea>
+                    </div>
+                    <select class="single_select" name="company_id" placeholder="Choisir une entreprise...">
+                        <option value=""></option>
+                        @foreach($list_companies as $key => $label)
+                            <option value="{{$key}}">{{$label}}</option>
+                        @endforeach
+                    </select>
+                    <select class="multiple_select" name="categories[]" placeholder="Choisir une ou des catégories..." multiple>
+                        @foreach($list_categories as $key => $label)
+                            <option value="{{$key}}">{{$label}}</option>
+                        @endforeach
+                    </select>
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-unique" value="Enregistrer">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+@endsection
 
-    <div>
-        <h2>Projets Github <small><a href="https://github.com/dimsand/">https://github.com/dimsand/</a></small></h2>
-    </div>
-    <div class="list-group">
-        @foreach($projets_github as $p)
-            <a href="#" class="list-group-item list-group-item-action">{{$p['name']}}</a>
-        @endforeach
-    </div>
-</section>
+@section('script')
+    <script src="{{ asset('js/selectize.min.js') }}"></script>
+    <script>
+        $('.single_select').selectize();
+        $('.multiple_select').selectize({
+            maxItems: 5,
+        });
+    </script>
 @endsection

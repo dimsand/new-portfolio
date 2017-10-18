@@ -7,10 +7,12 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
+        "guzzlehttp/guzzle": "~6.0",
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "twbs/bootstrap": "4.0.0-beta"
+        "twbs/bootstrap": "4.0.0-beta",
+        "nategood/httpful": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",
