@@ -19,7 +19,6 @@ class CreateTableProjectTechnos extends Migration
             $table->foreign('techno_id')->references('id')->on('technos');
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')->references('id')->on('projects');
-            $table->timestamps();
         });
     }
 

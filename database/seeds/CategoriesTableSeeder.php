@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ProjectCategoriesTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,7 +19,7 @@ class ProjectCategoriesTableSeeder extends Seeder
             ['libelle' => "Freelance"]
         );
         foreach ($data as $key => $d){
-            DB::table('project_categories')->insert([$key => $d]);
+            DB::table('categories')->insert([$key => $d]);
         }
     }
 }

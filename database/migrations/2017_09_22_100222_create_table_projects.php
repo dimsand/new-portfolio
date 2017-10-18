@@ -19,10 +19,10 @@ class CreateTableProjects extends Migration
             $table->text('description');
             $table->integer('company_id')->unsigned();
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->integer('project_category_id')->unsigned();
+            /*$table->integer('project_category_id')->unsigned();
             $table->foreign('project_category_id')->references('id')->on('project_categories');
             $table->integer('techno_id')->unsigned();
-            $table->foreign('techno_id')->references('id')->on('project_technos');
+            $table->foreign('techno_id')->references('id')->on('project_technos');*/
             $table->timestamps();
         });
     }
