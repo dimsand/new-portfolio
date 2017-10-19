@@ -12,4 +12,5 @@ class Company extends Model
      * @var string
      */
     protected $table = 'companies';
+
 }

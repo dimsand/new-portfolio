@@ -12,12 +12,4 @@ class ProjectCategory extends Model
      * @var string
      */
     protected $table = 'project_categories';
-
-    /**
-     * The projects that belong to the project_category.
-     */
-    public function projects()
-    {
-        return $this->belongsToMany('App\Project');
-    }
 }

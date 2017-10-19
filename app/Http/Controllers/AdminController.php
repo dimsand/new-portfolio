@@ -34,24 +34,22 @@ class AdminController extends Controller
     }
     public function projets(){
 
-        //$projects = Project::get();
-        $projects_details = Project::get();
-        $projects_details->categories()->attach($product_id);
-dd($projects_details);
+        $projects = Project::all()->load('categories','company');
+
         $uri = "https://api.github.com/users/dimsand/repos?sort=updated";
 
-        //$response = \Httpful\Request::get($uri)->send();
+        $response = \Httpful\Request::get($uri)->send();
         //dd($response);
 
         $projects_github = array();
-        /*foreach ($response->body as $key => $r){
-            $projets_github[$key]['name'] = $r->name;
-            $projets_github[$key]['description'] = $r->description;
-            $projets_github[$key]['language'] = $r->language;
-            $projets_github[$key]['url'] = $r->html_url;
-            $projets_github[$key]['created'] = $r->created_at;
-            $projets_github[$key]['updated'] = $r->updated_at;
-        }*/
+        foreach ($response->body as $key => $r){
+            $projects_github[$key]['name'] = $r->name;
+            $projects_github[$key]['description'] = $r->description;
+            $projects_github[$key]['language'] = $r->language;
+            $projects_github[$key]['url'] = $r->html_url;
+            $projects_github[$key]['created'] = $r->created_at;
+            $projects_github[$key]['updated'] = $r->updated_at;
+        }
         //dd($projets_github);
 
         return view('admin.projets', array(

@@ -18,7 +18,7 @@ class Project extends Model
      */
     public function categories()
     {
-        return $this->belongsToMany('App\ProjectCategory');
+        return $this->belongsToMany('App\Category', 'project_categories');
     }
 
     /**
@@ -27,6 +27,11 @@ class Project extends Model
     public function technos()
     {
         return $this->belongsToMany('App\Techno');
+    }
+
+    public function company()
+    {
+        return $this->belongsTo('App\Company');
     }
 
 }
