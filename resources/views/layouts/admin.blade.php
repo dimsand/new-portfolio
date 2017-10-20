@@ -11,14 +11,16 @@
     <title>@yield('title') | {{ config('app.name', 'Admin portfolio - Dimitri Sandron') }}</title>
 
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-grid.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     @yield('style')
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Administration portfolio</a>
+    <a class="navbar-brand" href="#"><img src="{{ asset('images/photo_profil.jpg') }}" class="img_navbar">Administration portfolio</a>
     <button class="navbar-toggler d-lg-none collapsed" type="button" data-toggle="collapse"
             data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -28,16 +30,7 @@
     <div class="navbar-collapse collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mt-2 mt-md-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Help</a>
+                <a target="_blank" class="nav-link" href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i>Go to site</a>
             </li>
         </ul>
     </div>
@@ -47,32 +40,34 @@
     <div class="row">
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
             <ul class="nav nav-pills flex-column">
+                <span class="menu_title_parent">Gestion du site</span>
                 <li class="nav-item">
                     <a class="nav-link <?= ((Route::currentRouteName() == 'admin_dashboard') ? 'active' : '') ?>"
-                       href="{{ route('admin_dashboard') }}">Tableau de bord <span class="sr-only">(current)</span></a>
+                       href="{{ route('admin_dashboard') }}"><i class="fa fa-tachometer" aria-hidden="true"></i>Tableau de bord <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ((Route::currentRouteName() == 'admin_infos_site') ? 'active' : '') ?>"
-                       href="{{ route('admin_infos_site') }}">Infos du site</a>
+                       href="{{ route('admin_infos_site') }}"><i class="fa fa-info-circle" aria-hidden="true"></i>Infos du site</a>
                 </li>
             </ul>
 
             <ul class="nav nav-pills flex-column">
+                <span class="menu_title_parent">Portfolio</span>
                 <li class="nav-item">
                     <a class="nav-link <?= ((Route::currentRouteName() == 'admin_competences') ? 'active' : '') ?>"
-                       href="{{ route('admin_competences') }}">Compétences <span class="sr-only">(current)</span></a>
+                       href="{{ route('admin_competences') }}"><i class="fa fa-flask" aria-hidden="true"></i>Compétences <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ((Route::currentRouteName() == 'admin_experience') ? 'active' : '') ?>"
-                       href="{{ route('admin_experience') }}">Experience</a>
+                       href="{{ route('admin_experience') }}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Experience</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ((Route::currentRouteName() == 'admin_projets') ? 'active' : '') ?>"
-                       href="{{ route('admin_projets') }}">Projets</a>
+                       href="{{ route('admin_projets') }}"><i class="fa fa-folder-open" aria-hidden="true"></i>Projets</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ((Route::currentRouteName() == 'admin_media') ? 'active' : '') ?>"
-                       href="{{ route('admin_media') }}">Media</a>
+                       href="{{ route('admin_media') }}"><i class="fa fa-picture-o" aria-hidden="true"></i>Media</a>
                 </li>
             </ul>
         </nav>
