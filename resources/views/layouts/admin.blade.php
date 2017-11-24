@@ -32,6 +32,15 @@
             <li class="nav-item active">
                 <a target="_blank" class="nav-link" href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i>Go to site</a>
             </li>
+            <li class="nav-item active">
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                   class="nav-link" role="button" aria-pressed="true"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            </li>
         </ul>
     </div>
 </nav>
