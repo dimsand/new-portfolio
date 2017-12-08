@@ -17,6 +17,8 @@ Auth::routes();
 // FRONT
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::post('contact', ['as'=>'contact.store','uses'=>'HomeController@contact']);
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // BACK ADMIN
 
@@ -35,7 +37,12 @@ Route::get('/admin/experience', 'AdminController@experience')->name('admin_exper
 // Projets
 Route::get('/admin/projets', 'AdminController@projets')->name('admin_projets');
 Route::get('/admin/add', 'AdminController@addProjetForm')->name('admin_add_project');
+Route::get('/admin/ajax_getGithubProjects', 'AdminController@ajax_getGithubProjects')->name('ajax_getGithubProjects');
 Route::post('/admin/addProjet', 'AdminController@addProjet')->name('admin_add_project_form');
+Route::get('/admin/editProject/{id}', 'AdminController@editProject')->name('admin_edit_project');
+Route::post('/admin/editProject/{id}', 'AdminController@editProjetForm')->name('admin_edit_project_form');
+Route::delete('/admin/deleteProject/{id}', 'AdminController@deleteProject')->name('admin_delete_project');
 
 // Media
 Route::get('/admin/media', 'AdminController@media')->name('admin_media');
+

@@ -130,27 +130,44 @@
                 <header>
                     <h2>Contact</h2>
                 </header>
-                <form action="#" method="post">
-                    <div>
-                        <div class="row">
-                            <div class="6u 12u$(mobile)">
-                                <input type="text" name="name" placeholder="Nom complet"/>
-                            </div>
-                            <div class="6u$ 12u$(mobile)">
-                                <input type="text" name="email" placeholder="Email"/>
-                            </div>
-                            <div class="12u$">
-                                <input type="text" name="subject" placeholder="Sujet"/>
-                            </div>
-                            <div class="12u$">
-                                <textarea name="message" placeholder="Message" rows="8"></textarea>
-                            </div>
-                            <div class="12u$">
-                                <input type="submit" value="Envoyer"/>
-                            </div>
-                        </div>
+
+                <!-- begin formulaire -->
+
+                @if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
                     </div>
-                </form>
+                @endif
+
+                {!! Form::open(['route'=>'contact.store']) !!}
+
+                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                    {!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Nom complet']) !!}
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                </div>
+
+                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                    {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Email']) !!}
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                </div>
+
+                <div class="form-group {{ $errors->has('subject') ? 'has-error' : '' }}">
+                    {!! Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Sujet']) !!}
+                    <span class="text-danger">{{ $errors->first('subject') }}</span>
+                </div>
+
+                <div class="form-group {{ $errors->has('body_message') ? 'has-error' : '' }}">
+                    {!! Form::textarea('body_message', old('body_message'), ['class'=>'form-control', 'placeholder'=>'Message']) !!}
+                    <span class="text-danger">{{ $errors->first('body_message') }}</span>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-black">Envoyer</button>
+                </div>
+
+                {!! Form::close() !!}
+
+                <!-- end formulaire -->
             </article>
 
         </div>

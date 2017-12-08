@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Ajout projet
+    Edition du projet {{$project->title}}
 @endsection
 
 @section('style')
@@ -40,26 +40,26 @@
 @endsection
 
 @section('content')
-    <h1>Ajout projet</h1>
+    <h1>Edition du projet {{$project->title}}</h1>
 
     <section class="">
         <div class="card">
             <div class="card-body">
-                <form method="POST" action="{{ route('admin_add_project_form') }}">
+                <form method="POST" action="{{ route('admin_edit_project_form', ['id'=>$project->id]) }}">
                     {{ csrf_field() }}
                     <div class="md-form">
                         <input type="text" id="title" class="form-control" name="title" placeholder="Nom" required
-                               autofocus value="">
+                               autofocus value="{{$project->title}}">
                     </div>
                     <div class="md-form">
                     <textarea type="text" id="description" class="md-textarea" name="description" rows="5"
                               placeholder="Description"
-                              required></textarea>
+                              required>{{$project->description}}</textarea>
                     </div>
                     <select class="single_select" name="company_id" placeholder="Choisir une entreprise...">
                         <option value=""></option>
                         @foreach($list_companies as $key => $label)
-                            <option value="{{$key}}">{{$label}}</option>
+                            <option value="{{$key}}" {{$project->company_id == $key ? 'selected' : ''}}>{{$label}}</option>
                         @endforeach
                     </select>
                     <select class="multiple_select" name="categories[]" placeholder="Choisir une ou des catégories..." multiple>
@@ -82,6 +82,11 @@
         $('.single_select').selectize();
         $('.multiple_select').selectize({
             maxItems: 5,
+            items: [
+                @foreach($project['categories'] as $cat)
+                {{$cat->id}},
+                @endforeach
+            ]
         });
     </script>
 @endsection

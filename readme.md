@@ -1,53 +1,82 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Portolio
+Nouveau portfolio fait en laravel. Front pour le site vitrine et back avec authentification pour la gestion desprojets, compétences, média, ...
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Requirements
+- PHP 7.1 minimum
+- Extensions de PHP7 mbstrinng, intl, ...
 
-## About Laravel
+    `apt install --no-install-recommends php7.1 libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-msgpack php7.1-memcached php7.1-intl php7.1-sqlite3 php7.1-gmp php7.1-geoip php7.1-mbstring php7.1-redis php7.1-xml php7.1-zip`
+- `php7.1-sqlite`
+- Composer
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Installation développement
+1. Cloner le projet
+2. Aller dans le dossier du projet
+3. Faire un `composer install` pour installer tous les packages dont laravel
+4. Créer fichier .env à la racine du projet à partir du fichier .env.example
+5. Modifier la config de la database dans le fichier .env
+```
+DB_CONNECTION=sqlite
+DB_DATABASE=database/database.sqlite
+```
+6 . Créer un fichier dans `database/data.sqlite`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+7 . Lancer un serveur avec `php artisan serve`
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+8 . Lancer un `php artisan `
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+### Problèmes
+- Installation PHP7.1 : https://tecadmin.net/install-php7-on-debian/
+- https://www.noobunbox.net/serveur/auto-hebergement/installer-php-7-1-sous-debian-et-ubuntu/
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## FRONT
+- Affichage du portfolio à l'index du site http://dimitrisandron.fr
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+![Capture d'écran](./screenshot_home.png)
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
+## Fonctionnalités
+- Présentation de mon parcours
+- Présentation de mes projets réalisés (avec liens GitHub)
+- Formulaire de contact
 
-## Contributing
+## About
+- Framework Laravel
+- HTML, CSS, Javascript
+- Thême HTML5 UP https://html5up.net/astral
+- © **Dimitri Sandron** - _Mai 2017_
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Restants à faire
+- Créer un projet laravel
+- Inclure le contenu du dossier du theme dans le projet Laravel
+- Trouver un theme backoffice
+- Créer système authentification pour administration
+- Modéliser base de données
+- Créer tous les onglets sur BO
 
-## Security Vulnerabilities
+#### FO :
+✓ Changer le fond
+- Page "A propos de moi"
+	✓ Photo (en rond)
+	- Présentation rapide
+	- Liens réseaux sociaux entreprises
+	- Parcours (presentation rapide, en gras dans un paragraphe)
+- Page "Mes travaux"
+	- Boucle foreach sur les projets
+	- Détail à afficher dans un déroulement en dessous de l'image aperçu du projet (gérer ocpacités)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+#### BO :
+- Modification contenu page "A propos de moi" > Présentation + photo de profil
+- Gestion des projets (ajouts, édition, suppression)
+- Stockage des messages de contact
+- Modification des autres infos du site (liens réseaux sociaux, ...)
 
-## License
+### Améliorations possibles
+n/a
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+### Liens utiles
+- https://galactic.ink/bg/
+- https://tympanus.net/
+- http://preview.themeforest.net/item/jevelin-multipurpose-premium-responsive-wordpress-theme/full_screen_preview/14728833
+- Thêmes design : http://collectui.com/challenges/admin-panel

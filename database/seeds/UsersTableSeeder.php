@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => "Dimitri Sandron",
             'email' => 'dimitri.sandron@outlook.fr',
-            'password' => 'testtest',
+            'password' => '$2y$10$tmuaCLAmiiEJ4ZJOh54g6uznBiWbM7cCKprOh5jUyhR6JjYv4e3zO',
         ]);
     }
 }

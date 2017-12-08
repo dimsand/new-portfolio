@@ -12,4 +12,6 @@ class ProjectCategory extends Model
      * @var string
      */
     protected $table = 'project_categories';
+
+    public $timestamps = false;
 }
