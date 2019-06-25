@@ -66,11 +66,11 @@
             <ul class="nav nav-pills flex-column">
                 <span class="menu_title_parent">Portfolio</span>
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_competences') ? 'active' : '') ?>"
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_competences' ||Route::currentRouteName() == 'admin_add_competence' ||Route::currentRouteName() == 'admin_edit_competence') ? 'active' : '') ?>"
                        href="{{ route('admin_competences') }}"><i class="fa fa-flask" aria-hidden="true"></i>Compétences <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_experience') ? 'active' : '') ?>"
+                    <a class="nav-link <?= ((Route::currentRouteName() == 'admin_experience' ||Route::currentRouteName() == 'admin_add_experience' ||Route::currentRouteName() == 'admin_edit_experience') ? 'active' : '') ?>"
                        href="{{ route('admin_experience') }}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Experience</a>
                 </li>
                 <li class="nav-item">

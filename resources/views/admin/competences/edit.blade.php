@@ -40,7 +40,7 @@
 
                     <div class="md-form">
                         <input type="number" id="title" class="form-control" name="note" placeholder="Note" required
-                            min='0' max='10' value="{{$competence->note}}">
+                            min='0' max='10' step="0.1" value="{{$competence->note}}">
                     </div>
                     
                     <select class="single_select" name="techno_type_id" placeholder="Choisir le type de techno...">

@@ -16,7 +16,8 @@ class TechnoTypesTableSeeder extends Seeder
             ['libelle' => "Framework PHP"],
             ['libelle' => "Librairie Javascript"],
             ['libelle' => "SGBD"],
-            ['libelle' => "Autres, outils, ..."]
+            ['libelle' => "Autres, outils, ..."],
+            ['libelle' => "Professionnel"]
         );
         foreach ($data as $key => $d){
             DB::table('techno_types')->insert([$key => $d]);

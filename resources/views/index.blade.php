@@ -1,3 +1,5 @@
+<?php use Carbon\Carbon; ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -5,9 +7,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
-        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
-        <meta name="developer" content="Md. Siful Islam">
+        <meta name="description" content="Portfolio Dimitri Sandron, développeur full-stack de Lyon. Je maîtrise les langages et frameworks du web (HTML/CSS, JS, PHP, Laravel, Ionic...)." />
+        <meta name="keywords" content="dimitri sandron, développeur, web, experience, bac+5, lyon, php, laravel, css, mobile, ionic" />
+        <meta name="developer" content="Dimitri Sandron">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 
         <!-- FAV AND ICONS   -->
@@ -108,7 +110,7 @@
                         <div class="col-sm-6">
                             <div class="mh-header-info">
                                 <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                    <span>Hello I'm</span>
+                                    <span>Salut ! Moi c'est...</span>
                                 </div>
                                 
                                 <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Dimitri Sandron</h2>
@@ -122,15 +124,15 @@
                                 
                                 <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                                     <li><a target="_blank" href="{{ url('http://www.linkedin.com/in/dimitrisandron') }}"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a target="_blank" href="{{ url('https://github.com/dimsand') }}"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a target="_blank" href="{{ url('https://twitter.com/dim_sand') }}"><i class="fa fa-github"></i></a></li>
+                                    <li><a target="_blank" href="{{ url('https://twitter.com/dim_sand') }}"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a target="_blank" href="{{ url('https://github.com/dimsand') }}"><i class="fa fa-github"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                 <div class="img-border">
-                                    <img src="front/images/hero.png" alt=""  class="img-fluid">
+                                    <img src="images/photos_profil/IMG_20181018_103527-01.jpeg" alt=""  class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -149,27 +151,21 @@
                 <div class="row section-separator">
                     <div class="col-sm-12 col-md-6">
                         <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                            <img src="front/images/ab-img.png" alt="" class="img-fluid">
+                            <img src="/images/photos_profil/Moi_rectangle.jpg" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="mh-about-inner">
-                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I’m a Patrick, web-developer based on Paris. 
-                            I have rich experience in web site design & building 
-                            and customization. Also I am good at</p>
+                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">A propos de moi</h2>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Salut, moi c'est Dimitri, développeur web full-stack, basé sur Lyon. J'ai maintenant plus de 5 ans d'expérience en développement web et mobile. La totalité de mon parcours de formation a été réalisée en alternance. Et je jouis aujourd'hui et depuis plus de 3 ans de mes compétences en tant que développeur web dans la société <a href="https://monabee.fr">Monabee</a>.</p>
                             <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                 <ul>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>javascript</span></li>
-                                    <li><span>jquery</span></li>
-                                    <li><span>php</span></li>
-                                    <li><span>laravel</span></li>
-                                    <li><span>sql server</span></li>
+                                    @foreach($technos as $techno)
+                                        <li><span style="border-color: {{ $techno->color }}">{{ strtolower($techno->libelle) }}</span></li>
+                                    @endforeach
                                 </ul>
                             </div>
-                            <a href="" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Télécharger mon CV <i class="fa fa-download"></i></a>
+                            <a href="docs/CV_BAC4.pdf" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Télécharger mon CV <i class="fa fa-download"></i></a>
                         </div>
                     </div>
                 </div>
@@ -185,38 +181,37 @@
             <div class="container">
                 <div class="row section-separator">
                     <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                        <h2>What I do</h2>
+                        <h2>Ce que je fais</h2>
                     </div>
                     <div class="col-sm-4">
                         <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                             <i class="fa fa-bullseye purple-color"></i>
-                            <h3>UI Design</h3>
+                            <h3>Création de sites internet</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat.
+                                Création de sites web statiques et dynamiques (en HTML/CSS, principalement avec Bootstrap).<br>
+                                Développement d'un site pour l'association <a href="https://les4tiches.fr" target="_blank">Les 4Tiches</a> dans laquelle je fais parti (équipage du Raid 4L Trophy).<br>
+                                Développement de ce portfolio.
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                             <i class="fa fa-code iron-color"></i>
-                            <h3>Web Development</h3>
+                            <h3>Développement Web</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat.
+                                Principalement orienté back-office.<br>
+                                Une expérience dans le e-commerce (création de modules prestashop)<br>
+                                Une expérience de développement d'un CRM maison pour l'entreprise <a href="https://monabee.fr" target="_blank">Monabee</a> en PHP (frameworks Laravel, CakePhp)
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                             <i class="fa fa-object-ungroup sky-color"></i>
-                            <h3>App Development</h3>
+                            <h3>Développement mobile</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat.
+                                Développement sous Ionic (Progressive WebApp) en interne pour l'entreprise <a href="https://monabee.fr" target="_blank">Monabee</a> (application CRM pour commerciaux et installateurs sur le terrain).<br>
+                                Tests de développement d'applications sous Android Studio.
                             </p>
                         </div>
                     </div>
@@ -234,7 +229,7 @@
                 <div class="container">
                     <div class="row section-separator">
                         <div class="section-title col-sm-12">
-                            <h3>Featured Projects</h3>
+                            <h3>Projets réalisés</h3>
                         </div>
                         <div class="col-sm-12">
                             <div class="mh-single-project-slide-by-side row">
@@ -368,99 +363,39 @@
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-skills-inner">
                                 <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                    <h3>Technical Skills</h3>
+                                    <h3>Compétences techniques</h3>
                                     <div class="each-skills">
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Javascript</div>
-                                                    <div class="percentagem-num">86%</div>
+                                        @foreach($technos as $key => $techno)
+                                            @if($key<6)
+                                                <div class="candidatos">
+                                                    <div class="parcial">
+                                                        <div class="info">
+                                                            <div class="nome">{{ $techno->libelle }}</div>
+                                                            <div class="percentagem-num">{{ $techno->note * 10 }}%</div>
+                                                        </div>
+                                                        <div class="progressBar">
+                                                            <div class="percentagem" style="width: {{ $techno->note * 10 }}%;"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 86%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Java</div>
-                                                    <div class="percentagem-num">46%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 46%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Python</div>
-                                                    <div class="percentagem-num">38%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 38%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">PHP</div>
-                                                    <div class="percentagem-num">17%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 17%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>                                    
-                                        
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Python</div>
-                                                    <div class="percentagem-num">38%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 38%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">PHP</div>
-                                                    <div class="percentagem-num">17%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 17%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            @endif
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                <h3>Professional Skills</h3>
+                                <h3>Compétences professionnelles</h3>
                                 <ul class="mh-professional-progress">
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-                                        <div class="pr-skill-name">Communication</div>
-                                    </li>
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="55"></div> 
-                                        <div class="pr-skill-name">Team Work</div>
-                                    </li>
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="86"></div>
-                                        <div class="pr-skill-name">Project Management</div>
-                                    </li> 
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="60"></div>
-                                        <div class="pr-skill-name">Creativity</div>
-                                    </li>
+                                    @foreach($technos as $key => $techno)
+                                        @if($techno->techno_type_id == \App\TechnoType::TYPE_PRO)
+                                            <li>
+                                                <div class="mh-progress mh-progress-circle" data-progress="{{ $techno->note * 10 }}"></div>
+                                                <div class="pr-skill-name">{{ $techno->libelle }}</div>
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -480,66 +415,88 @@
                     <div class="row section-separator">
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-education">
-                                <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
+                                <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Formation</h3>
                                 <div class="mh-education-deatils">
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                        page when looking at its layout. The point of using  Lorem Ipsum </p>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                        page when looking at its layout. The point of using  Lorem Ipsum </p>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                        page when looking at its layout. The point of using L orem Ipsum </p>
-                                    </div>
+
+                                    @foreach($experiences as $experience)
+                                        @if($experience->experience_type_id == \App\ExperienceType::TYPE_FORMATION)
+                                            <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                                <h4>{{ $experience->title }} <a target="_blank" href="{{ $experience->company->url_site_web }}">{{ $experience->company->nom }}</a></h4>
+                                                <div class="mh-eduyear">{{ (new Carbon($experience->date_debut))->format('m/Y') }} - {{ (new Carbon($experience->date_fin))->format('m/Y') }}</div>
+                                                <p>{{ $experience->description }} </p>
+                                            </div>
+                                        @endif
+                                    @endforeach
+
+                                    {{--<!-- Education Institutes-->--}}
+                                    {{--<div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">--}}
+                                        {{--<h4>Art & Multimedia From <a href="">Oxford University</a></h4>--}}
+                                        {{--<div class="mh-eduyear">2005-2008</div>--}}
+                                        {{--<p>It is a long established fact that a reader will be distracted by the readable content of a --}}
+                                        {{--page when looking at its layout. The point of using  Lorem Ipsum </p>--}}
+                                    {{--</div>                                --}}
+                                    {{--<!-- Education Institutes-->--}}
+                                    {{--<div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">--}}
+                                        {{--<h4>Art & Multimedia From <a href="">Oxford University</a></h4>--}}
+                                        {{--<div class="mh-eduyear">2005-2008</div>--}}
+                                        {{--<p>It is a long established fact that a reader will be distracted by the readable content of a --}}
+                                        {{--page when looking at its layout. The point of using  Lorem Ipsum </p>--}}
+                                    {{--</div>                                --}}
+                                    {{--<!-- Education Institutes-->--}}
+                                    {{--<div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">--}}
+                                        {{--<h4>Art & Multimedia From <a href="">Oxford University</a></h4>--}}
+                                        {{--<div class="mh-eduyear">2005-2008</div>--}}
+                                        {{--<p>It is a long established fact that a reader will be distracted by the readable content of a --}}
+                                        {{--page when looking at its layout. The point of using L orem Ipsum </p>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-work">
-                                 <h3>Work Experience</h3>
+                                 <h3>Expérience professionnelle</h3>
                                 <div class="mh-experience-deatils">
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                        <h4>UI/UX Designer <a href="">IronSketch</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                        </ul>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                        </ul>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                        </ul>
-                                    </div>
+
+                                    @foreach($experiences as $experience)
+                                        @if($experience->experience_type_id == \App\ExperienceType::TYPE_PRO)
+                                            <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                                                <h4>{{ $experience->title }} <a target="_blank" href="{{ $experience->company->url_site_web }}">{{ $experience->company->nom }}</a></h4>
+                                                <div class="mh-eduyear">{{ (new Carbon($experience->date_debut))->format('m/Y') }} - {{ (new Carbon($experience->date_fin))->format('m/Y') }}</div>
+                                                <p>{{ $experience->description }} </p>
+                                            </div>
+                                    @endif
+                                    @endforeach
+
+                                    {{--<!-- Education Institutes-->--}}
+                                    {{--<div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">--}}
+                                        {{--<h4>UI/UX Designer <a href="">IronSketch</a></h4>--}}
+                                        {{--<div class="mh-eduyear">2005-2008</div>--}}
+                                        {{--<span>Responsibility :</span>--}}
+                                        {{--<ul class="work-responsibility">--}}
+                                            {{--<li><i class="fa fa-circle"></i>Validate CSS</li>--}}
+                                            {{--<li><i class="fa fa-circle"></i>Project Management</li>--}}
+                                        {{--</ul>--}}
+                                    {{--</div>                                --}}
+                                    {{--<!-- Education Institutes-->--}}
+                                    {{--<div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">--}}
+                                        {{--<h4>Art & Multimedia From <a href="">Oxford University</a></h4>--}}
+                                        {{--<div class="mh-eduyear">2005-2008</div>--}}
+                                        {{--<span>Responsibility :</span>--}}
+                                        {{--<ul class="work-responsibility">--}}
+                                            {{--<li><i class="fa fa-circle"></i>Validate CSS</li>--}}
+                                            {{--<li><i class="fa fa-circle"></i>Project Management</li>--}}
+                                        {{--</ul>--}}
+                                    {{--</div>                                --}}
+                                    {{--<!-- Education Institutes-->--}}
+                                    {{--<div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">--}}
+                                        {{--<h4>Art & Multimedia From <a href="">Oxford University</a></h4>--}}
+                                        {{--<div class="mh-eduyear">2005-2008</div>--}}
+                                        {{--<span>Responsibility :</span>--}}
+                                        {{--<ul class="work-responsibility">--}}
+                                            {{--<li><i class="fa fa-circle"></i>Validate CSS</li>--}}
+                                            {{--<li><i class="fa fa-circle"></i>Project Management</li>--}}
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                         </div>
@@ -557,16 +514,16 @@
             <div class="container">
                 <div class="row section-separator">
                     <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                        <h3>Recent Portfolio</h3>
+                        <h3>Portfolio</h3>
                     </div>
                     <div class="part col-sm-12">
                         <div class="portfolio-nav col-sm-12" id="filter-button">
                             <ul>
-                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
-                                <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
-                                <li data-filter=".branding" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Branding</span></li>
-                                <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
-                                <li data-filter=".ui" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
+                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>Tout</span></li>
+                                <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Dev perso.</span></li>
+                                <li data-filter=".branding" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Dev pro.</span></li>
+                                <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Projets</span></li>
+                                <li data-filter=".ui" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Autres</span></li>
                             </ul>
                         </div>
                         <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
@@ -725,10 +682,9 @@
                 <div class="container">
                     <div class="row section-separator">
                         <div class="each-quates col-sm-12 col-md-6">
-                            <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Interested to Work?</h3>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Mirum est notare quam littera gothica.
-                            quam nunc putamus parum claram,</p>
-                            <a href="#mh-contact" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Contact</a>
+                            <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Intéressé ?</h3>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">N'hésitez pas à me contacter pour partager votre expérience, si vous envisagez un projet web ou mobile, ou tout simplement si vous avez un pépin sur un langage que je connais.</p>
+                            <a href="#contactMeDiv" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -822,7 +778,7 @@
            FOOTER 3
         ===================
         -->
-        <footer class="mh-footer mh-footer-3">
+        <footer class="mh-footer mh-footer-3" id="contactMeDiv">
             <div class="container-fluid">
                 <div class="row section-separator">
                     <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -935,7 +891,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="text-left text-xs-center">
-                                                <p>Dimitri Sandron @2019</p>
+                                                <p>Dimitri Sandron @ 2019</p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">

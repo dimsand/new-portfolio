@@ -15,4 +15,7 @@ class ExperienceType extends Model
 
     public $timestamps = false;
 
+    const TYPE_PRO = 1;
+    const TYPE_FORMATION = 2;
+
 }

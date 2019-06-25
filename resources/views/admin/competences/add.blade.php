@@ -56,7 +56,7 @@
                     <div class="md-form">
                         <div class="md-form">
                                 <input type="number" id="title" class="form-control" name="note" placeholder="Note" required
-                                    min='0' max='10' value="">
+                                    min='0' max='10' step="0.1" value="">
                             </div>
                     </div>
                     

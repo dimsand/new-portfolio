@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Experience;
+use App\Techno;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -18,9 +20,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $infos_site_presentation = DB::table('site_infos')->where('info', "PRESENTAION")->first();
+        $technos = Techno::orderBy('note','desc')->get();
+        $experiences = Experience::with('company')->orderBy('date_debut','desc')->get();
         return view('index', [
-            'infos_site_presentation' => $infos_site_presentation
+            'technos' => $technos,
+            'experiences' => $experiences
         ]);
     }
 
@@ -38,18 +42,20 @@ class HomeController extends Controller
 
         Contact::create($request->all());
 
-        Mail::send(['html' => 'emails.contact'],
+        if(!Mail::send(['html' => 'emails.contact'],
             array(
                 'name' => $request->get('name'),
                 'email' => $request->get('email'),
                 'subject' => $request->get('subject'),
                 'body_message' => nl2br($request->get('body_message'))
-            ), function($message)
+            ), function($message) use ($request)
             {
-                $message->from('d.sandron@it-akademy.fr');
-                $message->to('d.sandron@it-akademy.fr', 'Dimitri Sandron');
+                $message->from("contact@dimitrisandron.fr");
+                $message->to('dimitri.sandron@outlook.fr', 'Dimitri Sandron');
                 $message->subject('Email de contact');
-            });
+            })){
+            return Response::json(array('success'=>false, 'errors'=>"Erreur lors de l'envoi."));
+        }
 
         return Response::json(array('success'=>true, 'message'=>'Votre message a bien été envoyée.'));
     }

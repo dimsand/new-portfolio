@@ -13,4 +13,6 @@ class TechnoType extends Model
      */
     protected $table = 'techno_types';
 
+    const TYPE_PRO = 6;
+
 }

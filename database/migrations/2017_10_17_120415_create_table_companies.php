@@ -17,6 +17,7 @@ class CreateTableCompanies extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('adresse')->nullable();
+            $table->string('url_site_web')->nullable();
         });
     }
 
