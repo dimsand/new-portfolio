@@ -28,12 +28,7 @@ class AdminController extends Controller
     public function infos_site(){
         return view('admin.infos_site');
     }
-    public function competences(){
-        return view('admin.competences');
-    }
-    public function experience(){
-        return view('admin.experience');
-    }
+
     public function projets(){
         $projects = Project::all()->load('categories','company');
         return view('admin.projets', array(

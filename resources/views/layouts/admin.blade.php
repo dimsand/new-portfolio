@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -30,12 +33,12 @@
     <div class="navbar-collapse collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mt-2 mt-md-0">
             <li class="nav-item active">
-                <a target="_blank" class="nav-link" href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i>Go to site</a>
+                <a target="_blank" class="nav-link" href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i>Portfolio</a>
             </li>
             <li class="nav-item active">
                 <a href="{{ route('logout') }}"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                   class="nav-link" role="button" aria-pressed="true"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                   class="nav-link" role="button" aria-pressed="true"><i class="fa fa-sign-out" aria-hidden="true"></i>Deconnexion</a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}

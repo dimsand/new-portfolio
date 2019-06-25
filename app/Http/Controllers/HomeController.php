@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Validator;
 use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,7 @@ class HomeController extends Controller
     public function index()
     {
         $infos_site_presentation = DB::table('site_infos')->where('info', "PRESENTAION")->first();
-        return view('home', [
+        return view('index', [
             'infos_site_presentation' => $infos_site_presentation
         ]);
     }
@@ -32,7 +33,7 @@ class HomeController extends Controller
             'body_message' => 'required'
         ]);
         if ($validator->fails()) {
-            return redirect('/#contact')->withErrors($validator)->withInput();
+            return Response::json(array('success'=>false, 'errors'=>$validator->errors()));
         }
 
         Contact::create($request->all());
@@ -50,6 +51,6 @@ class HomeController extends Controller
                 $message->subject('Email de contact');
             });
 
-        return redirect('/#contact')->with('success', 'Votre message a bien été envoyé.');
+        return Response::json(array('success'=>true, 'message'=>'Votre message a bien été envoyée.'));
     }
 }

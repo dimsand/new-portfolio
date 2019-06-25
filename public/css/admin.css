@@ -202,6 +202,6 @@ a.aRecupGithubProject{
     height: 13px;
 }
 
-.table_projects th, .table_projects td{
+.table-va th, .table-va td, .table_projects th, .table_projects td{
     vertical-align: middle;
 }

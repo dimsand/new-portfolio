@@ -12,4 +12,11 @@ class Techno extends Model
      * @var string
      */
     protected $table = 'technos';
+
+    public $timestamps = false;
+
+    public function technoType()
+    {
+        return $this->belongsTo('App\TechnoType', 'techno_type_id');
+    }
 }
