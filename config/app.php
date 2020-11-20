@@ -180,6 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         'Collective\Html\HtmlServiceProvider',
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
     ],
 
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Form' => 'Collective\Html\FormFacade',
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 
