@@ -96,3 +96,14 @@ fabric.properties
 # End of https://www.gitignore.io/api/laravel,composer,phpstorm
 /.idea/
 /.idea/portfolio.iml
+
+# Created by https://www.toptal.com/developers/gitignore/api/sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=sass
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# End of https://www.toptal.com/developers/gitignore/api/sass

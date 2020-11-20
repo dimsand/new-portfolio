@@ -34,7 +34,8 @@ class HomeController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'subject' => 'required',
-            'body_message' => 'required'
+            'body_message' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
         if ($validator->fails()) {
             return Response::json(array('success'=>false, 'errors'=>$validator->errors()));

@@ -13,10 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 
         <!-- FAV AND ICONS   -->
-        <link rel="shortcut icon" href="{{ asset('front/images/favicon.ico') }}">
-        <link rel="shortcut icon" href="{{ asset('front/images/apple-icon.png') }}">
-        <link rel="shortcut icon" sizes="72x72" href="{{ asset('front/images/apple-icon-72x72.png') }}">
-        <link rel="shortcut icon" sizes="114x114" href="{{ asset('front/images/apple-icon-114x114.png') }}">
+{{--        <link rel="shortcut icon" href="{{ asset('front/images/favicon.ico') }}">--}}
+{{--        <link rel="shortcut icon" href="{{ asset('front/images/apple-icon.png') }}">--}}
+{{--        <link rel="shortcut icon" sizes="72x72" href="{{ asset('front/images/apple-icon-72x72.png') }}">--}}
+{{--        <link rel="shortcut icon" sizes="114x114" href="{{ asset('front/images/apple-icon-114x114.png') }}">--}}
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         
         <!-- Google Font-->
         <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -132,7 +149,7 @@
                         <div class="col-sm-6">
                             <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                 <div class="img-border">
-                                    <img src="images/photos_profil/IMG_20181018_103527-01.jpeg" alt=""  class="img-fluid">
+                                    <img src="images/photos_profil/photo-profil.jpg" alt=""  class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -787,7 +804,7 @@
                     <div class="map-image image-bg col-sm-12">
                         <div class="container mt-30">
                             <div class="row">
-                                <div class="col-sm-12 col-md-6 mh-footer-address">
+                                <div class="col-sm-12 col-md-6 mt-4 mh-footer-address">
                                     <div class="col-sm-12 xs-no-padding">
                                         <div class="mh-address-footer-item dark-bg shadow-1 media wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                             <div class="each-icon">
@@ -801,7 +818,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 xs-no-padding">
+                                    <div class="col-sm-12 mt-5 xs-no-padding">
                                         <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                             <div class="each-icon">
                                                 <i class="fa fa-envelope-o"></i>
@@ -852,6 +869,10 @@
                                             {!! Form::textarea('body_message', old('body_message'), ['class'=>'contact-message', 'id'=>'message', 'placeholder'=>'Message', 'rows'=>6, 'required'=>true]) !!}
                                             <span class="text-danger">{{ $errors->first('body_message') }}</span>
                                         </div>
+
+                                        <div class="col-sm-12">
+                                            {!! NoCaptcha::display(['data-theme' => 'dark']) !!}
+                                        </div>
                         
                                         <div class="btn-form col-sm-12">
                                             <button type="submit" class="btn btn-fill btn-block" id="form-submit">Envoyer</button>
@@ -891,7 +912,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="text-left text-xs-center">
-                                                <p>Dimitri Sandron @ 2019</p>
+                                                <p>Dimitri Sandron @ 2020</p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -946,5 +967,7 @@
     <!-- Custom Scripts-->
     <!-- <script src="front/js/map-init.js"></script> -->
     <script src="front/js/custom-scripts.js"></script>
+
+    {!! NoCaptcha::renderJs() !!}
 </body>
 </html>
