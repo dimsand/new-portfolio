@@ -339,7 +339,8 @@ a {
 
     &.btn-border {
         background-color: transparent;
-        // border-color: fade($light-color, 100%);
+        border-color: $main-color;
+        border-width: 2px;
 
         &:hover {
             // background-color: darken($main-color-1, 5%);
@@ -671,11 +672,11 @@ ul {
 }
 
 .home-2-img {
-    background-image: url(../images/home-bg-img.jpg);
+    background-image: url(../../images/ZenBG2.png);
 }
 
 .featured-img-one {
-    background-image: url(../images/home-bg-img.jpg);
+    background-image: url(../../images/ZenBG2.png);
 }
 .featured-img-two {
     background-image: url(../images/extra-feature-bg.jpg);

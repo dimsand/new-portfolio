@@ -302,7 +302,7 @@
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                         <tr>
                             <td style="padding: 20px; text-align: center; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #ffffff;">
-                                <p style="margin: 0;">Copyrights Dimitri Sandron 2017</p>
+                                <p style="margin: 0;">Copyrights Dimitri Sandron {{ date('Y') }}</p>
                             </td>
                         </tr>
                     </table>
