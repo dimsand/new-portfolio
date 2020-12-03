@@ -68,7 +68,7 @@
         background-color: $white;
     }
     .img-color-overlay {
-        background-color: rgba($white, 0.9);
+        background-color: rgba($white, 0.8);
     }
     .dark-bg {
         background-color: $white;
@@ -241,7 +241,7 @@
     //     border-color: $white;
     // }
     .img-color-overlay {
-        background-color: rgba($black, 0.9);
+        background-color: rgba($black, 0.8);
     }
     .mh-home .mh-header-info .social-icon li .fa:hover {
         background-color: $white;
@@ -329,11 +329,11 @@
     .mh-home {
         .hero-img {
             img {
-                border: 20px solid rgba(0, 0, 0, 0.40);
+                border: 4px solid #ffffff;
             }
         }
         .img-border {
-            border: 20px solid rgba(0, 0, 0, 0.90);
+            //border: 20px solid rgba(0, 0, 0, 0.90);
         }
     }
     .candidatos .parcial .progressBar {
@@ -404,10 +404,10 @@ body {
     animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 .section-loader .loader div:nth-child(1) {
-    border-color: #E91E63;
+    border-color: #a7a7aa;
 }
 .section-loader .loader div:nth-child(2) {
-    border-color: #0dbda1;
+    border-color: #28435d;
     -webkit-animation-delay: -0.5s;
     animation-delay: -0.5s;
 }
@@ -527,7 +527,7 @@ body {
             margin-bottom: 30px;
             img {
                 border: 0px solid $white;
-                border-radius: 50%;
+                border-radius: 5%;
             }
         }
         h2 {
@@ -676,20 +676,24 @@ body {
         float: none;
         margin-top: 30px;
         text-align: center;
+        opacity: 0.7;
+        &:hover{
+            opacity: 1;
+        }
         img {
             margin: 0 auto;
             float: none;
             text-align: center;
             // height: 360px;
             // width: 360px;
-            border: 20px solid rgba(0, 0, 0, 0.17);
-            border-radius: 50%;
+            border: 4px solid #ffffff;
+            border-radius: 5%;
         }
     }
     .img-border {
-        height: 400px;
-        width: 400px;
-        border: 20px solid rgba(0, 0, 0, 0.07);
+        height: 300px;
+        width: 300px;
+        //border: 20px solid rgba(0, 0, 0, 0.07);
         margin: 0 auto;
         border-radius: 50%;
     }
@@ -1428,7 +1432,6 @@ body {
 */
 
 .mh-footer-address {
-    margin-bottom: 60px;
     .mh-address-footer-item {
         padding: 30px;
         text-align: center;
@@ -2557,7 +2560,7 @@ BLOG Pagination
     .img-border {
         height: 130px;
         width: 130px;
-        border: 10px solid rgba(0, 0, 0, 0.07);
+        //border: 10px solid rgba(0, 0, 0, 0.07);
         margin: 0 auto;
         border-radius: 50%;
     }
@@ -2692,4 +2695,22 @@ BLOG Pagination
 
 .g-recaptcha{
     margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.portfolio-a-venir{
+    width: 100%;
+  position: initial !important;
+}
+
+.portfolioContainer{
+    background-color: #a6a6a6b5;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+
+    &:hover{
+        background-color: rgba(131, 131, 131, 0.71);
+    }
 }

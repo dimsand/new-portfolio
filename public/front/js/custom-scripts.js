@@ -379,7 +379,7 @@
           } else {
             var msgClasses = "h3 text-center shake animated text-danger";
           }
-          $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+          $("#msgSubmit").removeClass().addClass(msgClasses).html(msg);
         }
     
 
