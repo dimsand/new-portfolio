@@ -33,14 +33,15 @@ class HomeController extends Controller
             'required' => 'Le champs :attribute est obligatoire. ',
             'email'    => "L'email saisi n'est pas une adresse email valide. <br>",
             'g-recaptcha-response.required' => 'Etes-vous un robot ? ',
-            'g-recaptcha-response.captcha' => "Erreur de captcha. "
+//            'g-recaptcha-response.captcha' => "Erreur de captcha. "
         ];
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email',
             'subject' => 'required',
             'body_message' => 'required',
-            'g-recaptcha-response' => 'required|captcha'
+//            'g-recaptcha-response' => 'required|captcha'
+            'g-recaptcha-response' => 'required'
         ], $customMessages);
         if ($validator->fails()) {
             return Response::json(array('success'=>false, 'errors'=>$validator->errors()));
