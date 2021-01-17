@@ -2751,11 +2751,15 @@ BLOG Pagination
   width: 100%;
   position: initial !important; }
 
-.portfolioContainer {
+.portfolioContainerCustom {
   background-color: #a6a6a6b5;
   border-radius: 5px;
   min-height: 100px;
   display: flex;
   align-items: center; }
-  .portfolioContainer:hover {
+  .portfolioContainerCustom:hover {
     background-color: rgba(131, 131, 131, 0.71); }
+
+ul.liste-fonctionnalites li {
+  list-style-type: square;
+  margin-left: 25px; }
