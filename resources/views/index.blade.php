@@ -60,6 +60,16 @@
         <!-- <link rel="alternate stylesheet" href="front/css/colors/slate.css" title="slate"> -->
         <!-- <link rel="alternate stylesheet" href="front/css/colors/yellow.css" title="yellow"> -->
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNW579599P"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-SNW579599P');
+        </script>
+
     </head>
     <body class="dark-vertion black-bg">
         
@@ -172,7 +182,7 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="mh-about-inner">
                             <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">👨‍💻 A propos de moi</h2>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Salut, moi c'est Dimitri, je suis <strong>développeur web full-stack</strong> en <strong>freelance</strong>, basé sur Lyon. Je propose mes prestations de <strong>développement web ou mobile</strong> en <strong>freelance</strong>. <a href="#contactMeDiv">Contactez-moi</a> pour partager vos idées de <strong>projets</strong>, je serais ravis de <strong>transformer</strong> les idées qui fusent dans vos esprits 🧐</p>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Salut, moi c'est Dimitri, je suis <strong>développeur web full-stack</strong> en <strong>freelance</strong>, sur Lyon. Je suis spécialisé dans les missions web en php (frameworks Laravel, CakePhp, Symfony), mais je suis ouvert à tout projet de <strong>développement web ou mobile</strong>. <a href="#contactMeDiv">Contactez-moi</a> pour partager vos idées de <strong>projets</strong>, je serais ravi de <strong>transformer</strong> les idées qui fusent dans vos esprits 🧐</p>
                             <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                 <ul>
                                     @foreach($technos as $techno)
@@ -203,8 +213,8 @@
                             <i class="fa fa-bullseye purple-color"></i>
                             <h3>Création de sites internet</h3>
                             <p>
-                                🖥 Création de <strong>sites web</strong> statiques et dynamiques.<br>
-                                👐 Ouvert à toute proposition de création de site web (e-commerce, carnet de réservations en ligne, ...).
+                                🖥 Création de <strong>sites web</strong> statiques et dynamiques<br>
+                                👐 Ouvert à toute proposition de création de site web (e-commerce, carnet de réservations en ligne, ...)
                             </p>
                         </div>
                     </div>
@@ -213,9 +223,9 @@
                             <i class="fa fa-code iron-color"></i>
                             <h3>Développement Web</h3>
                             <p>
-                                💻 Orienté <strong>back-office</strong>.<br>
-                                📖 Projets répondant à un cahier des charges.<br>
-                                🛠 Refonte d'outils webs existants.
+                                💻 Orienté <strong>back-office</strong><br>
+                                📖 Projets répondant à un cahier des charges<br>
+                                🛠 Refonte d'outils webs existants (CRM et ERP maison, etc)
                             </p>
                         </div>
                     </div>
@@ -224,7 +234,9 @@
                             <i class="fa fa-object-ungroup sky-color"></i>
                             <h3>Développement mobile</h3>
                             <p>
-                                📱 Développement d'<strong>applications mobiles</strong> pour Android.
+                                📱 Développement d'<strong>applications mobiles</strong> pour Android<br>
+                                🗺 Utilisation de l'API Google Maps<br>
+                                💬 Notifications
                             </p>
                         </div>
                     </div>
@@ -533,41 +545,55 @@
                         <div class="portfolio-nav col-sm-12" id="filter-button">
                             <ul>
                                 <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>Tout</span></li>
-                                <li style="pointer-events: none" data-filter=".branding" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Freelance</span></li>
-                                <li style="pointer-events: none" data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Projets perso</span></li>
-                                <li style="pointer-events: none" data-filter=".ui" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Autres</span></li>
+                                <li data-filter=".freelance" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Freelance</span></li>
+                                <li data-filter=".perso" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Projets perso</span></li>
+                                <li data-filter=".xp-pro" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Expérience pro</span></li>
+                                <li data-filter=".autres" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Autres</span></li>
                             </ul>
                         </div>
                         <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <div class="portfolioContainer row">
 
+{{--                            <div class="portfolioContainerCustom row">--}}
+{{--                                <div class="portfolio-a-venir text-center">--}}
+{{--                                    A venir...--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                                <div class="portfolio-a-venir text-center">
-                                    A venir...
+                            <div class="portfolioContainer  row">
+
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 perso">
+                                    <figure>
+                                        <img src="front/images/portfolio/Les4Tiches-min.PNG" alt="Les 4Tiches">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Site vitrine Les 4Tiches</h5>
+                                            <span class="sub-title">Projets perso</span>
+                                            <a data-fancybox data-src="#les4tiches"></a>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-
-{{--                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">--}}
-{{--                                    <figure>--}}
-{{--                                        <img src="front/images/portfolio/g1.jpg" alt="img04">--}}
-{{--                                        <figcaption class="fig-caption">--}}
-{{--                                            <i class="fa fa-search"></i>--}}
-{{--                                            <h5 class="title">Creative Design</h5>--}}
-{{--                                            <span class="sub-title">Photograpy</span>--}}
-{{--                                            <a data-fancybox data-src="#mh"></a>--}}
-{{--                                        </figcaption>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">--}}
-{{--                                    <figure>--}}
-{{--                                        <img src="front/images/portfolio/g2.png" alt="img04">--}}
-{{--                                        <figcaption class="fig-caption">--}}
-{{--                                            <i class="fa fa-search"></i>--}}
-{{--                                            <h5 class="title">Creative Design</h5>--}}
-{{--                                            <span class="sub-title">Photograpy</span>--}}
-{{--                                            <a href="front/images/portfolio/g2.png" data-fancybox data-src="#mh"></a>--}}
-{{--                                        </figcaption>--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 xp-pro">
+                                    <figure>
+                                        <img src="front/images/portfolio/Logo-Monabee.png" alt="Monabee">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Développement d'un CRM maison</h5>
+                                            <span class="sub-title">Expérience pro (CDI)</span>
+                                            <a data-fancybox data-src="#monabee"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 xp-pro">
+                                    <figure>
+                                        <img src="front/images/portfolio/abeecrm0.png" alt="Monabee AbeeCRM">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Dév. d'une application mobile</h5>
+                                            <span class="sub-title">Expérience pro (CDI)</span>
+                                            <a data-fancybox data-src="#monabee-abeecrm"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
 {{--                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">--}}
 {{--                                    <figure>--}}
 {{--                                        <img src="front/images/portfolio/g5.png" alt="img04">--}}
@@ -639,39 +665,130 @@
                     </div> <!-- End: .part -->
                 </div> <!-- End: .row -->
             </div>
-            <div class="mh-portfolio-modal" id="mh">
+            <div class="mh-portfolio-modal" id="les4tiches">
                 <div class="container">
                     <div class="row mh-portfolio-modal-inner">
                         <div class="col-sm-5">
-                            <h2>Wrap - A campanion plugin</h2>
-                            <p>Wrap is a clean and elegant Multipurpose Landing Page Template. 
-                            It will fit perfectly for Startup, Web App or any type of Web Services.
-                            It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                            All variations are organized separately so you can use / customize the template very easily.</p>       
-                            
-                            <p>It is a clean and elegant Multipurpose Landing Page Template. 
-                            It will fit perfectly for Startup, Web App or any type of Web Services.
-                            It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                            All variations are organized separately so you can use / customize the template very easily.</p>      
+                            <h2>Site vitrine de l'association Les 4Tiches</h2>
+                            <p>Développement du site vitrine présentant l'association Les 4Tiches.</p>
+                            <p>Les 4Tiches est une association ayant participé au célèbre raid 4L Trophy en 2018.</p>
+
+                            <p>
+                                <strong>Fonctionnalités : </strong>
+                                <ul class="liste-fonctionnalites">
+                                <li>Présentation de contenus HTML (texte, photos, intégration vidéo)</li>
+                                <li>Utilisation d'une librairie pour la galerie photos</li>
+                                <li>Formulaire de contact (+google captcha)</li>
+                                <li>Intégration widget page facebook</li>
+                                <li>Interface d'administration (pour créer des articles sur la page News et créer des albums photos et uploader les photos)</li>
+                                </ul>
+                            </p>
+
                             <div class="mh-about-tag">
                                 <ul>
+                                    <li><span>laravel</span></li>
                                     <li><span>php</span></li>
                                     <li><span>html</span></li>
                                     <li><span>css</span></li>
-                                    <li><span>php</span></li>
-                                    <li><span>wordpress</span></li>
-                                    <li><span>React</span></li>
-                                    <li><span>Javascript</span></li>
+                                    <li><span>javascript</span></li>
+                                    <li><span>bootstrap</span></li>
                                 </ul>
                             </div>
-                            <a href="" class="btn btn-fill">Live Demo</a>
+                            <a href="https://les4tiches.fr" target="_blank" class="btn btn-fill">Voir le site</a>
                         </div>
                         <div class="col-sm-7">
                             <div class="mh-portfolio-modal-img">
-                                <img src="front/images/pr-0.jif" alt="" class="img-fluid">
-                                <p>All variations are organized separately so you can use / customize the template very easily.</p>    
-                                <img src="front/images/pr-1.jif" alt="" class="img-fluid">
-                                <p>All variations are organized separately so you can use / customize the template very easily.</p>     
+                                <p>Page d'accueil</p>
+                                <img src="front/images/portfolio/Les4Tiches-min.PNG" alt="" class="img-fluid">
+                                <p>Visualisation de galleries photos de l'évènement.</p>
+                                <img src="front/images/portfolio/Les4Tiches2.PNG" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mh-portfolio-modal" id="monabee">
+                <div class="container">
+                    <div class="row mh-portfolio-modal-inner">
+                        <div class="col-sm-5">
+                            <h2>Développement d'un CRM maison - Monabee</h2>
+                            <p>Développement des fonctionnalités d'un CRM maison, pendant une durée de plus de <strong>5 ans</strong> dans l'entreprise <a href="https://www.monabee.fr">Monabee</a></p>
+                            <p>Utilisé en interne par l'ensemble des pôles liés à l'activité commerciale et du support.</p>
+                            <p>
+                                <strong>Fonctionnalités : </strong>
+                                <ul class="liste-fonctionnalites">
+                                <li>Gestion des prospects/clients</li>
+                                <li>Prise de RDVS clients</li>
+                                <li>Upload/visualisation et génération des documents clients</li>
+                                <li>Saisi des informations des ventes et suivi des étapes de ventes</li>
+                                <li>Génération de factures/avoirs clients</li>
+                                <li>Tableaux de bords (financiers, administratifs, commerciaux, ...)</li>
+                                <li>Gestion des incidents du support client</li>
+                                <li>Utilisation d'API publiques (API Outlook Calendar, ...)</li>
+                                </ul>
+                            </p>
+
+                            <div class="mh-about-tag">
+                                <ul>
+                                    <li><span>laravel</span></li>
+                                    <li><span>cakephp</span></li>
+                                    <li><span>php</span></li>
+                                    <li><span>html</span></li>
+                                    <li><span>css</span></li>
+                                    <li><span>javascript</span></li>
+                                    <li><span>bootstrap</span></li>
+                                    <li><span>api</span></li>
+                                </ul>
+                            </div>
+{{--                            <a href="https://monabee.fr" target="_blank" class="btn btn-fill">Voir le site</a>--}}
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="mh-portfolio-modal-img">
+                                <p>Visualisation de la liste des prospects et clients</p>
+                                <img src="front/images/portfolio/crm0_censored.jpg" alt="" class="img-fluid">
+                                <p>Détails d'un dossier</p>
+                                <img src="front/images/portfolio/crm1_censored.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mh-portfolio-modal" id="monabee-abeecrm">
+                <div class="container">
+                    <div class="row mh-portfolio-modal-inner">
+                        <div class="col-sm-5">
+                            <h2>Développement d'une application mobile - Monabee</h2>
+                            <p>Développement d'une application à destination des commerciaux et des installateurs de l'entreprise <a href="https://www.monabee.fr">Monabee</a>.</p>
+                            <p>L'objectif de l'application est de faciliter les différentes actions du commercial. Elle reprend donc plusieurs fonctionnalités du CRM (dans sa version web) avec laquelle elle partage la même base de données.</p>
+                            <p>
+                                <strong>Fonctionnalités : </strong>
+                                <ul class="liste-fonctionnalites">
+                                <li>Visualisation des RDVS commerciaux/installateurs à venir</li>
+                                <li>Saisie du résultat des RDVS</li>
+                                <li>Prise de photos/upload des documents clients</li>
+                                <li>Visualisation sur une Google Maps des prospects à visiter sur place</li>
+                                <li>Création de nouveaux prospects</li>
+                                <li>Notifications</li>
+                                </ul>
+                            </p>
+
+                            <div class="mh-about-tag">
+                                <ul>
+                                    <li><span>ionic</span></li>
+                                    <li><span>angular</span></li>
+                                    <li><span>typescript</span></li>
+                                    <li><span>api</span></li>
+                                    <li><span>nodejs</span></li>
+                                </ul>
+                            </div>
+{{--                            <a href="https://monabee.fr" target="_blank" class="btn btn-fill">Voir le site</a>--}}
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="mh-portfolio-modal-img">
+                                <p>Menu de l'application</p>
+                                <img src="front/images/portfolio/abeecrm3_censored.jpg" alt="" class="img-fluid">
+                                <p>Visualisation prospects/clients sur une Google Maps</p>
+                                <img src="front/images/portfolio/abeecrm2.jpg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -692,7 +809,7 @@
                             <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Intéressé ?</h3>
                             <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Un projet web ou mobile ? Le code a toujours été pour moi une passion, je mettrais tout en œuvre pour réussir à bien la mission que vous me confierez.</p>
                             <a href="#contactMeDiv" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Contact</a>
-{{--                            <a href="#contactMeDiv" class="btn btn-border wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Profil Malt</a>--}}
+                            <a href="https://www.malt.fr/profile/dimitrisandron" target="_blank" class="btn btn-border wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Profil Malt</a>
                         </div>
                     </div>
                 </div>
@@ -842,7 +959,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="text-left text-xs-center">
-                                                <p>Dimitri Sandron ©2020</p>
+                                                <p>Dimitri Sandron ©<?=date('Y')?></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 text-right text-xs-center">
