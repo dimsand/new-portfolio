@@ -11,10 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 
         <!-- FAV AND ICONS   -->
-{{--        <link rel="shortcut icon" href="{{ asset('front/images/favicon.ico') }}">--}}
-{{--        <link rel="shortcut icon" href="{{ asset('front/images/apple-icon.png') }}">--}}
-{{--        <link rel="shortcut icon" sizes="72x72" href="{{ asset('front/images/apple-icon-72x72.png') }}">--}}
-{{--        <link rel="shortcut icon" sizes="114x114" href="{{ asset('front/images/apple-icon-114x114.png') }}">--}}
         <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
@@ -52,13 +48,6 @@
         
         <!-- Colors -->
         <link rel="stylesheet" href="{{ asset('front/css/colors/defauld.css') }}" title="defauld">
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/blue.css" title="blue"> -->
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/green.css" title="green"> -->
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/blue-munsell.css" title="blue-munsell"> -->
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/orange.css" title="orange"> -->
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/purple.css" title="purple">  -->
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/slate.css" title="slate"> -->
-        <!-- <link rel="alternate stylesheet" href="front/css/colors/yellow.css" title="yellow"> -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNW579599P"></script>
