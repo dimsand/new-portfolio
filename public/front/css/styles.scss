@@ -488,6 +488,10 @@ body {
                     color: $main-color;
                 }
             }
+            img.logo-header{
+                height: 45px;
+                border-radius: 25px;
+            }
         }
     }
 }
@@ -676,7 +680,7 @@ body {
         float: none;
         margin-top: 30px;
         text-align: center;
-        opacity: 0.7;
+        //opacity: 0.7;
         &:hover{
             opacity: 1;
         }
@@ -1325,6 +1329,7 @@ body {
             margin: 0 auto;
             margin-bottom: 20px;
             border-radius: 50%;
+            height: 116px;
         }
         p {
             margin: 10px 0;
