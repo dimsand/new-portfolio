@@ -87,6 +87,9 @@
                     
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto ml-auto">
+                                <li>
+                                    <img src="images/logos/JPG_CMJN_Bleu_blanc.jpg" alt="" class="img-fluid logo-header">
+                                </li>
                                 <li class="nav-item active">
                                     <a class="nav-link" href="#mh-home">Accueil</a>
                                 </li>
@@ -101,6 +104,9 @@
 {{--                                </li>                                --}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="#mh-portfolio">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#mh-recommandations">Recommandations</a>
                                 </li>
                                 <li class="nav-item">
                                    <a class="nav-link" href="#contactMeDiv">Contact</a>
@@ -146,7 +152,8 @@
                         <div class="col-sm-6">
                             <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                 <div class="img-border">
-                                    <img src="images/LogoV2.gif" alt=""  class="img-fluid">
+{{--                                    <img src="images/LogoV2.gif" alt=""  class="img-fluid">--}}
+                                    <img src="images/logos/JPG_CMJN_Bleu_blanc.jpg" alt=""  class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -811,81 +818,112 @@
            Testimonial
         ===================
         -->
-        {{-- <section class="mh-testimonial" id="mh-testimonial">
+        <section class="mh-testimonial" id="mh-recommandations">
             <div class="home-v-img">
                 <div class="container">
                     <div class="row section-separator">
                         <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            <h3>Client Reviews</h3>
+                            <h3>Recommandations</h3>
                         </div>
                         <div class="col-sm-12 wow fadeInUp" id="mh-client-review" data-wow-duration="0.8s" data-wow-delay="0.3s">
                             <div class="each-client-item">
                                 <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="front/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
+                                    <img src="images/testimonials/jeremie.jpg" alt="" class="img-fluid">
+                                    <p>Dimitri est un as dans son domaine. Il suffit de lui expliquer le besoin et il trouve des solutions immédiatement et en adéquation avec les attentes. J'ai pu collaborer avec lui pendant 3 ans et je n'ai jamais été déçu de ses services. Il est très professionnel et saura vous donner entière satisfaction.
+
+                                        Je le recommande vivement pour tous types de missions, il saura égayer vos journée et accomplir un travail sans accroc et qualitatif.</p>
+                                    <h4>Jérémie Gaudin</h4>
+                                    <span>Commercial BtoB, Monabee</span>
                                 </div>
                             </div>
                             <div class="each-client-item">
                                 <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="front/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
+                                    <img src="images/testimonials/isabelle.jpg" alt="" class="img-fluid">
+                                    <p>Dimitri est une personne très professionnelle et qui tient ses engagements. Il est toujours prêt à aider ses collaborateurs et proposer des solutions de développement pour faciliter le travail de chacun. C'est une qualité qu'il ne faut en aucun cas négliger!
+                                        Si vous voulez travailler avec une personne de confiance, alors n'hésitez pas à vous adresser à Dimitri! Je le recommande les yeux fermés.</p>
+                                    <h4>Isabelle Ledoux</h4>
+                                    <span>Assistante ADV, Monabee</span>
                                 </div>
-                            </div>                    
-                            
+                            </div>
+
                             <div class="each-client-item">
                                 <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="front/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
+                                    <img src="images/testimonials/lucie.jpg" alt="" class="img-fluid">
+                                    <p>J'ai eu la chance de travailler dans la même entreprise que Dimitri pendant 4 ans. Très conscienscieux, il saura vous apporter le sérieux et la rapidité dont vous avez besoin pour vos développements.
+                                        Lors de la refonte du site vitrine de l'entreprise, Dimitri a su m'aider pour approndir certains développements sur wordpress. Une preuve de sa polyvalence !</p>
+                                    <h4>Lucie Pochinot</h4>
+                                    <span>Chargée de communication et chargée de refonte du site web, Monabee</span>
+                                </div>
+                            </div>
+
+                            <div class="each-client-item">
+                                <div class="mh-client-item dark-bg black-shadow-1">
+                                    <img src="images/testimonials/amandine.jpg" alt="" class="img-fluid">
+                                    <p>Personne très à l ecoute de nos besoins, très bonne rapidité d'exécution avec un résultat qui correspond à nos attentes.
+                                        Je recommande les yeux fermés</p>
+                                    <h4>Amandine Richard</h4>
+                                    <span>Assistante ADV, Monabee</span>
                                 </div>
                             </div>
                             <div class="each-client-item">
                                 <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="front/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
+                                    <img src="images/testimonials/pierre.jpg" alt="" class="img-fluid">
+                                    <p>Dimitri nous a apporté beaucoup de facilité en répondant à des cahiers des charges d'automatisation de tâches récurrentes sur des dossiers ainsi que la rédaction et l'amélioration continue de notre CRM. En dehors de l'aspect technique qu'il maitrise c'est un collègue très agréable avec qui il est facile de travailler.</p>
+                                    <h4>Pierre Daudey</h4>
+                                    <span>Chargé d'étude et projet BE, Monabee</span>
                                 </div>
                             </div>
                             <div class="each-client-item">
                                 <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="front/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
+                                    <img src="images/testimonials/celine.jpg" alt="" class="img-fluid">
+                                    <p>Dimitri est un atout pour n'importe quelle entreprise. J'ai été impressionné par ça capacité à respecter les délais souvent très court avec une qualité irréprochable.
+
+                                        C'est une personne à l'écoute qui est force de proposition pour élaborer des développements qui colle au besoin.
+
+                                        Dimitri est une personne très professionnel qui sera répondre à vos attentes. Je vous le recommande sans hésitation.</p>
+                                    <h4>Céline Thomann</h4>
+                                    <span>Responsable administratif et comptable, Monabee</span>
                                 </div>
-                            </div>                    
-                            
+                            </div>
+
                             <div class="each-client-item">
                                 <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="front/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
+                                    <img src="images/testimonials/ornella.jpg" alt="" class="img-fluid">
+                                    <p>Dimitri est une personne de confiance, toujours à l'écoute et qui connait parfaitement son domaine !
+                                        Il a su mettre en place des actions de développement afin de m'aider dans mon travail quotidien et je le remercie énormément pour tout ça!
+                                        Il sait répondre à nos demandes et en un temps record.
+                                        Il est toujours là pour rendre service et est très professionnel !</p>
+                                    <h4>Ornella Comby</h4>
+                                    <span>Assitante ADV, Monabee</span>
+                                </div>
+                            </div>
+
+                            <div class="each-client-item">
+                                <div class="mh-client-item dark-bg black-shadow-1">
+                                    <img src="images/testimonials/mathieu.jpg" alt="" class="img-fluid">
+                                    <p>Ayant pu travailler avec Dimitri pendant plusieurs années sur différents projets, je ne pourrai que le recommander. Dimitri a cette force de pouvoir se mettre à la place de l'utilisateur. Cette force lui permet de comprendre rapidement le besoin et de proposer directement des améliorations. J'apprécie grandement sa démarche d'échange avec le demandeur au fil du projet de développement. Il n'y a jamais de mauvaise surprise car il arrive à inclure l'ensemble des parties prenantes pendant la phase de développement. J'espère pourvoir mener d'autres projets dans l'avenir avec Dimitri !</p>
+                                    <h4>Mathieu Bail</h4>
+                                    <span>Responsable Bureau d'étude, Monabee</span>
+                                </div>
+                            </div>
+
+                            <div class="each-client-item">
+                                <div class="mh-client-item dark-bg black-shadow-1">
+                                    <img src="images/testimonials/helene.jpg" alt="" class="img-fluid">
+                                    <p>Dimitri, en plus d'être une personne très agréable au quotidien, est à l'écoute et comprend très bien les différentes demandes qui lui sont faites.
+                                        Il sait se mettre à la place de son interlocuteur pour cerner ses besoins et y répondre.
+                                        Dimitri a aussi été très réactif sur plusieurs demandes urgentes.
+
+                                        Vous pouvez lui faire complètement confiance!</p>
+                                    <h4>Hélène Tavernière</h4>
+                                    <span>Chargée Ressources Humaines, Monabee</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> --}}
+        </section>
         
         <!--
         ===================

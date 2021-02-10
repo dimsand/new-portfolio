@@ -982,6 +982,9 @@ body {
         padding-right: 0; }
       .mh-header .navbar-nav li a:hover {
         color: #2b4964; }
+    .mh-header .navbar-nav li img.logo-header {
+      height: 45px;
+      border-radius: 25px; }
 
 .nav-3 .navbar-dark .navbar-nav .nav-link a {
   color: rgba(255, 255, 255, 0.7); }
@@ -1111,8 +1114,7 @@ body {
   margin: 0 auto;
   float: none;
   margin-top: 30px;
-  text-align: center;
-  opacity: 0.7; }
+  text-align: center; }
   .mh-home .hero-img:hover {
     opacity: 1; }
   .mh-home .hero-img img {
@@ -1601,7 +1603,8 @@ body {
     border: 5px solid #2b4964;
     margin: 0 auto;
     margin-bottom: 20px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    height: 116px; }
   .mh-testimonial .mh-client-item p {
     margin: 10px 0; }
     .mh-testimonial .mh-client-item p::before {
